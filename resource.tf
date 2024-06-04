@@ -43,6 +43,12 @@ resource "aws_s3_bucket" "bucket1" {
 
 # Create on instance
 resource "aws_instance" "web-1" {
-  ami = "ami-06068bc7800ac1a83"
-  instance_type = "t2.micro"  
+#  ami = "ami-06068bc7800ac1a83"
+  ami = var.ami
+  instance_type = var.inst-type  
+}
+
+resource "aws_key_pair" "mykey" {
+  key_name = "mykey"
+  public_key = file(var.PATH_TO_PUBLIC_KEY)  
 }
