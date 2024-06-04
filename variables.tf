@@ -17,7 +17,7 @@ variable "PATH_TO_PUBLIC_KEY" {
     default = "keys/mykey.pub"  
 }
 
-variable "PATH_TO_PUBLIC_KEY" {
+variable "PATH_TO_PRIVITE_KEY" {
     default = "keys/mykey"
 }
 
